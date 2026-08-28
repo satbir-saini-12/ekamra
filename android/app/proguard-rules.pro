@@ -16,7 +16,7 @@
 }
 
 # Keep model classes
--keep class com.aero.play.** { *; }
+-keep class com.ekamra.ott.** { *; }
 -keep class **.model.** { *; }
 -keep class **.models.** { *; }
 
@@ -45,3 +45,9 @@
 
 # Flutter Downloader
 -keep class vn.hunghd.flutterdownloader.** { *; }
+
+# Play Core (missing classes for R8)
+-dontwarn com.google.android.play.core.splitcompat.SplitCompatApplication
+-dontwarn com.google.android.play.core.splitinstall.SplitInstallException
+-dontwarn com.google.android.play.core.tasks.OnFailureListener
+-dontwarn com.google.android.play.core.**
