@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "219659380296",
+    "project_id": "ekamraiptv",
+    "storage_bucket": "ekamraiptv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219659380296:android:389253bb4873028d685a7d",
+        "android_client_info": {
+          "package_name": "com.ekamra.ott"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219659380296-vn40f47ohttuvg07ol03vh50rumkrc7k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ekamra.ott",
+            "certificate_hash": "e092fdddff4453d39b1c09201fee2a96545be7ff"
+          }
+        },
+        {
+          "client_id": "219659380296-bs1u7d43a3pnjfmbml2v87anrfj11qa5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk6pskFf0IN1qBDIIGGn6LPzEPrdurn1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219659380296-bs1u7d43a3pnjfmbml2v87anrfj11qa5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
