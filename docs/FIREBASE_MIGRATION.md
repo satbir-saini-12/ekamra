@@ -8,12 +8,12 @@
 
 | Field | Current Value |
 |-------|--------------|
-| Project ID | `aeroplayott` |
+| Project ID | `ekamraott` |
 | Project Number | `1020367860153` |
-| Storage Bucket | `aeroplayott.firebasestorage.app` |
+| Storage Bucket | `ekamraott.firebasestorage.app` |
 | Mobile SDK App ID | `1:1020367860153:android:bccf172aaea389d43b8668` |
 | API Key | `AIzaSyBk****` (masked) |
-| Package Name | `com.aero.play` |
+| Package Name | `com.ekamra.ott` |
 | OAuth Client IDs | 4 clients (3 Android, 1 Web) |
 | Certificate Hashes | 3 SHA-1 fingerprints registered |
 

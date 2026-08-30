@@ -11,7 +11,7 @@
 ### Application Framework
 - **Framework:** Flutter (Dart)
 - **App Type:** OTT (Over-The-Top) streaming application — movies, live TV, TV series, radio, events
-- **Origin:** Based on "OXOO" template by Spagreen, previously rebranded to "DesiDhamaka", then to "AeroPlay"
+- **Origin:** Based on "OXOO" template by Spagreen, previously rebranded to "DesiDhamaka", then to "EKAMRA IPTV"
 
 ### Language
 - **Primary:** Dart (Flutter)
@@ -88,7 +88,7 @@ OXOO-Flutter/
 
 ### Networking
 - **HTTP Client:** Dio (`^5.7.0`) + `http` package (`^1.2.2`)
-- **API Base URL:** `https://aeroplay.live/panel/rest-api/` (hardcoded in `lib/config.dart`)
+- **API Base URL:** `https://ekamraott.com/panel/rest-api/` (hardcoded in `lib/config.dart`)
 - **API Versioning:** Appends `v130` to base URL
 - **Authentication:** Basic Auth (`admin:1234` base64 encoded) + API Key header
 - **⚠️ CRITICAL:** Basic Auth credentials hardcoded in `lib/network/api_configuration.dart`
@@ -260,10 +260,10 @@ OXOO-Flutter/
 
 | # | Problem | File(s) | Details |
 |---|---------|---------|---------|
-| C1 | **Hardcoded keystore passwords committed to Git** | `android/key.properties` | `storePassword=aeroplay123`, `keyPassword=aeroplay123` in plaintext |
+| C1 | **Hardcoded keystore passwords committed to Git** | `android/key.properties` | `storePassword=123456`, `keyPassword=123456` in plaintext |
 | C2 | **Release keystore committed to Git** | `android/keys/release.keystore`, `android/keys/release_new.keystore` | Actual signing keys in repository |
 | C3 | **Debug keystore committed to Git** | `android/keys/debug.keystore` | Debug signing key in repository |
-| C4 | **All keystore documentation contains plaintext passwords** | `android/keys/*.md`, `android/keys/*.bat`, `android/keys/*.sh`, `android/keys/*.ps1` | Passwords `aeroplay123` visible in multiple files |
+| C4 | **All keystore documentation contains plaintext passwords** | `android/keys/*.md`, `android/keys/*.bat`, `android/keys/*.sh`, `android/keys/*.ps1` | Passwords visible in multiple files |
 | C5 | **Hardcoded API Basic Auth credentials** | `lib/network/api_configuration.dart:11-13` | `username = 'admin'`, `password = '1234'` — base64 encoded |
 | C6 | **Hardcoded API key** | `lib/config.dart:6` | `apiKey = "nzmuxnghyd8u9xgvk3so8ilm"` |
 | C7 | **Hardcoded Stripe publishable key** | `lib/config.dart:13` | `pk_test_51M25oy...` (test key, but still hardcoded) |
@@ -420,7 +420,7 @@ release {
 ### Signing Configuration
 - **Release keystore:** `android/keys/release.keystore` (committed to repo — CRITICAL)
 - **Keystore passwords:** In `key.properties` (committed — CRITICAL)
-- **Key alias:** `aeroplay`
+- **Key alias:** `key0`
 - **Debug keystore:** Custom debug keystore at `android/keys/debug.keystore` (unusual)
 
 ---

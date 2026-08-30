@@ -11,9 +11,9 @@
 | Key | Location | Current Value (Masked) | Action |
 |-----|----------|----------------------|--------|
 | Release keystore | `android/keys/release.keystore` | `[BINARY]` | **GENERATE NEW** — old keystore committed to repo. Create new upload keystore using `keytool`. Store as GitHub Secret (`ANDROID_KEYSTORE_BASE64`). Do NOT commit. |
-| Release keystore password | `android/key.properties` | `aero****123` | **GENERATE NEW** — use strong password. Store as GitHub Secret (`ANDROID_KEYSTORE_PASSWORD`). |
-| Release key password | `android/key.properties` | `aero****123` | **GENERATE NEW** — use strong password. Store as GitHub Secret (`ANDROID_KEY_PASSWORD`). |
-| Release key alias | `android/key.properties` | `aeroplay` | **GENERATE NEW** — use new alias. Store as GitHub Secret (`ANDROID_KEY_ALIAS`). |
+| Release keystore password | `android/key.properties` | `123456` | **GENERATE NEW** — use strong password. Store as GitHub Secret (`ANDROID_KEYSTORE_PASSWORD`). |
+| Release key password | `android/key.properties` | `123456` | **GENERATE NEW** — use strong password. Store as GitHub Secret (`ANDROID_KEY_PASSWORD`). |
+| Release key alias | `android/key.properties` | `key0` | **GENERATE NEW** — use new alias. Store as GitHub Secret (`ANDROID_KEY_ALIAS`). |
 | Debug keystore | `android/keys/debug.keystore` | `[BINARY]` | **DELETE** — use Flutter/Gradle default debug signing. |
 
 **Migration impact:** New app = new Play Store listing = new upload key. No existing users to impact. Old signing identity is irrelevant for the new app.
@@ -43,7 +43,7 @@
 | Key | Location | Current Value (Masked) | Action |
 |-----|----------|----------------------|--------|
 | Firebase API Key | `google-services.json:47` | `AIzaS****` | **REPLACE** — new Firebase project config. |
-| Firebase Project ID | `google-services.json:4` | `aeroplayott` | **REPLACE** — new Firebase project. |
+| Firebase Project ID | `google-services.json:4` | `ekamraott` | **REPLACE** — new Firebase project. |
 | Firebase App ID | `google-services.json:10` | `1:1020...` | **REPLACE** — new Firebase app registration. |
 | Firebase OAuth Client IDs | `google-services.json:17,25,33,41` | `1020...-****` | **REPLACE** — new OAuth clients. |
 | Facebook App ID | `strings.xml:4` | `442816973525148` | **REMOVE** — Facebook auth disabled. Remove from strings and manifest. |
@@ -74,8 +74,8 @@
 
 | Key | Location | Current Value (Masked) | Action |
 |-----|----------|----------------------|--------|
-| Keystore passwords in scripts | `android/keys/*.bat`, `*.sh`, `*.ps1` | `aero****123` | **REMOVE + ROTATE** — delete files, rotate keystore. |
-| Keystore passwords in docs | `android/keys/*.md` | `aero****123` | **REMOVE + ROTATE** — delete files, rotate keystore. |
+| Keystore passwords in scripts | `android/keys/*.bat`, `*.sh`, `*.ps1` | `123456` | **REMOVE + ROTATE** — delete files, rotate keystore. |
+| Keystore passwords in docs | `android/keys/*.md` | `123456` | **REMOVE + ROTATE** — delete files, rotate keystore. |
 | Basic Auth credentials | `lib/network/api_configuration.dart` | `admin:****` | **REMOVE + ROTATE** — move to build-time injection, rotate on backend. |
 | API key | `lib/config.dart:6` | `nzmux****` | **REMOVE + ROTATE** — move to build-time injection, rotate on backend. |
 | Stripe key | `lib/config.dart:13` | `pk_test****` | **REMOVE + ROTATE** — move to build-time injection, rotate on Stripe. |

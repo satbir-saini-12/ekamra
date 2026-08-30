@@ -24,7 +24,7 @@
 |-------|-------|
 | **Location** | `android/key.properties` |
 | **Type** | Signing identity — store/key passwords |
-| **Value** | `aeroplay123` (masked: `aero****123`) |
+| **Value** | `123456` (masked: `123456`) |
 | **Status** | **ROTATION REQUIRED** — committed to repository |
 | **Action** | Generate new keystore with new passwords. Never commit `key.properties` with real values. Use GitHub Secrets for CI. |
 
@@ -61,7 +61,7 @@
 |-------|-------|
 | **Location** | `android/keys/EXPORT_KEY_WITH_PEPK.md`, `android/keys/KEYSTORE_MAPPING.md`, `android/keys/NEW_KEYSTORE_INFO.md`, `android/keys/README.md`, `android/keys/SHA_FINGERPRINTS.md` |
 | **Type** | Documentation containing plaintext passwords |
-| **Exposed values** | `aeroplay123` (store password), `aeroplay123` (key password), `aeroplay` (alias) |
+| **Exposed values** | `123456` (store password), `123456` (key password), `key0` (alias) |
 | **Status** | **ROTATION REQUIRED** — passwords exposed in documentation |
 | **Action** | Delete all files in `android/keys/` directory. |
 
@@ -71,7 +71,7 @@
 |-------|-------|
 | **Location** | `android/keys/generate_keys.bat`, `android/keys/generate_keys.sh`, `android/keys/export_key.bat`, `android/keys/export_key.sh`, `android/keys/test_keystore.ps1` |
 | **Type** | Scripts containing plaintext passwords |
-| **Exposed values** | `aeroplay123`, `aeroplay`, `CN=AeroPlay` |
+| **Exposed values** | `123456`, `key0`, `CN=EKAMRA IPTV` |
 | **Status** | **ROTATION REQUIRED** — passwords in scripts |
 | **Action** | Delete all scripts. |
 

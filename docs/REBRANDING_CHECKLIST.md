@@ -1,7 +1,7 @@
 # Rebranding Checklist — New Application Identity
 
 **Audit Date:** 2026-08-26  
-**Current Identity:** "AeroPlay" / `com.aero.play` (previously "OXOO" / `com.oxoo.spagreen`, "DesiDhamaka" / `com.desi.dhamaka`)  
+**Current Identity:** "EKAMRA IPTV" / `com.ekamra.ott` (previously "OXOO" / `com.oxoo.spagreen`, "DesiDhamaka" / `com.desi.dhamaka", "AeroPlay" / `com.aero.play`)  
 
 ---
 

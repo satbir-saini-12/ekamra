@@ -36,7 +36,7 @@ The policy must clearly state that the app collects:
 
 The policy must disclose that data is shared with:
 
-- **Backend API server** (currently `aeroplay.live` — will change with rebranding)
+- **Backend API server** (currently `ekamraott.com` — will change with rebranding)
 - **Firebase** (Google LLC) — for authentication services
 - **OneSignal** — for push notification delivery
 - **Google Sign-In** (Google LLC) — for authentication
