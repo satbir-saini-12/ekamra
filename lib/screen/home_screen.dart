@@ -4,6 +4,7 @@ import 'package:oxoo/server/repository.dart';
 import 'package:oxoo/widgets/home_screen/country_item.dart';
 import 'package:oxoo/widgets/home_screen/popular_star.dart';
 import 'package:provider/provider.dart';
+import '../../models/all_live_tv_by_category.dart';
 import '../../models/configuration.dart';
 import '../../models/home_content.dart';
 import '../../widgets/banner_ads.dart';
@@ -29,12 +30,14 @@ class _HomeScreenState extends State<HomeScreen> {
   var appModeBox = Hive.box('appModeBox');
   bool? isDark;
   late Future<HomeContent> _homeContent;
+  late Future<LiveTVListModel?> _allLiveTV;
 
   @override
   void initState() {
     super.initState();
     isDark = appModeBox.get('isDark') ?? false;
     _homeContent = Repository().getHomeContent();
+    _allLiveTV = Repository().getAllLiveTV();
   }
 
   @override
@@ -49,16 +52,19 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor:
           isDark! ? CustomTheme.primaryColorDark : Colors.transparent,
-      body: FutureBuilder<HomeContent>(
-        future: _homeContent,
+      body: FutureBuilder<List<dynamic>>(
+        future: Future.wait([_homeContent, _allLiveTV]),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.hasData) {
+            HomeContent homeContent = snapshot.data[0];
+            LiveTVListModel? liveTVModel = snapshot.data[1];
             return buildUI(
                 context: context,
                 authUser: authUser,
                 paymentConfig: paymentConfig,
                 appConfig: appConfig,
-                homeContent: snapshot.data);
+                homeContent: homeContent,
+                liveTVCategories: liveTVModel?.channels);
           } else if (snapshot.hasError) {
             return Center(
               child: Text(
@@ -97,7 +103,8 @@ class _HomeScreenState extends State<HomeScreen> {
       PaymentConfig? paymentConfig,
       AuthUser? authUser,
       AppConfig? appConfig,
-      required HomeContent homeContent}) {
+      required HomeContent homeContent,
+      List<AllLiveTVChannels>? liveTVCategories}) {
     return CustomScrollView(
       slivers: <Widget>[
         SliverToBoxAdapter(
@@ -133,6 +140,29 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
+
+        //Top 10 Channels
+        if (homeContent.top10Channels != null && homeContent.top10Channels!.isNotEmpty)
+          SliverToBoxAdapter(
+            child: Container(
+              margin: EdgeInsets.only(top: 5, bottom: 5),
+              child: HomeScreenLiveTVList(
+                  tvList: homeContent.top10Channels,
+                  title: AppContent.top10Channels,
+                  isSearchWidget: false,
+                  isDark: isDark,
+                  isFromHomeScreen: true),
+            ),
+          ),
+
+        //Live TV Categories with channels
+        if (liveTVCategories != null && liveTVCategories.isNotEmpty)
+          AllLiveTVList(
+            channels: liveTVCategories,
+            isDark: isDark,
+            isFromHomeScreen: true,
+          ),
+
         //Featured TV Channels
         if (homeContent.featuredTvChannel!.isNotEmpty)
           SliverToBoxAdapter(

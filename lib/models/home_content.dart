@@ -15,6 +15,7 @@ class HomeContent extends Equatable {
     this.latestMovies,
     this.latestTvseries,
     this.featuresGenreAndMovie,
+    this.top10Channels,
   });
 
   final HomeContentSlider? slider;
@@ -25,6 +26,7 @@ class HomeContent extends Equatable {
   final List<Movie>? latestMovies;
   final List<Tvseries>? latestTvseries;
   final List<FeaturesGenreAndMovies>? featuresGenreAndMovie;
+  final List<TvChannels>? top10Channels;
 
   factory HomeContent.fromJson(Map<String, dynamic> json) => HomeContent(
     slider: HomeContentSlider.fromJson(json["slider"]),
@@ -35,6 +37,7 @@ class HomeContent extends Equatable {
     latestMovies: List<Movie>.from(json["latest_movies"].map((x) => Movie.fromJson(x))),
     latestTvseries: List<Tvseries>.from(json["latest_tvseries"].map((x) => Tvseries.fromJson(x))),
     featuresGenreAndMovie: List<FeaturesGenreAndMovies>.from(json["features_genre_and_movie"].map((x) => FeaturesGenreAndMovies.fromJson(x))),
+    top10Channels: json["top_10_channels"] != null ? List<TvChannels>.from(json["top_10_channels"].map((x) => TvChannels.fromJson(x))) : [],
   );
 
   Map<String, dynamic> toJson() => {
@@ -46,6 +49,7 @@ class HomeContent extends Equatable {
     "latest_movies": List<dynamic>.from(latestMovies!.map((x) => x.toJson())),
     "latest_tvseries": List<dynamic>.from(latestTvseries!.map((x) => x.toJson())),
     "features_genre_and_movie": List<dynamic>.from(featuresGenreAndMovie!.map((x) => x.toJson())),
+    "top_10_channels": top10Channels != null ? List<dynamic>.from(top10Channels!.map((x) => x.toJson())) : [],
   };
 
   @override

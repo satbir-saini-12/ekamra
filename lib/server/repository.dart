@@ -612,7 +612,7 @@ class Repository {
         {"id": userId, "reason": reason, "password": password});
     try {
       final response = await dio.post(
-          "${ConfigApi().getApiUrl()}/deactivate_account",
+          "${ConfigApi().getApiUrl()}/delete_account",
           data: formData);
       SubmitResponseModel deactivate =
           SubmitResponseModel.fromJson(response.data);

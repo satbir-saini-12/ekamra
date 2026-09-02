@@ -185,8 +185,9 @@ Widget buildTVItem(BuildContext context, heading, List<TvChannels>? tvList,
 class AllLiveTVList extends StatelessWidget {
   final List<AllLiveTVChannels>? channels;
   final bool? isDark;
+  final bool? isFromHomeScreen;
 
-  AllLiveTVList({required this.channels, this.isDark});
+  AllLiveTVList({required this.channels, this.isDark, this.isFromHomeScreen});
 
   @override
   Widget build(BuildContext context) {
@@ -194,6 +195,6 @@ class AllLiveTVList extends StatelessWidget {
         delegate: SliverChildListDelegate(List.generate(
             channels!.length,
             (index) => buildTVItem(context, channels![index].title,
-                channels![index].list, false, isDark!, false)).toList()));
+                channels![index].list, false, isDark!, isFromHomeScreen ?? false)).toList()));
   }
 }

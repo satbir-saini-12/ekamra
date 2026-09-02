@@ -12,9 +12,11 @@ class Config {
   //paypal secret key
   static String paypalSecretKey = "";
   //set term and conditions url here
-  // TODO: Update with your terms and conditions URL
   static String termsPolicyUrl =
       "https://ekamraott.com/panel/page/terms";
+  //account deletion url for Play Console data safety form
+  static String accountDeletionUrl =
+      "https://ekamraott.com/panel/page/account_deletion";
 
   static final bool enableFacebookAuth = false;
   static final bool enableGoogleAuth = true;

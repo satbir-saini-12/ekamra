@@ -62,6 +62,7 @@ class AppContent {
   static final String exploreByCountry = "Explore By Country";
   static final String popularStars = "Popular Stars";
   static final String featuredTvChannels = "Featured TV Channels";
+  static final String top10Channels = "Top 10 Channels";
   static final String featuredRadio = "Featured Radio ";
   static final String liveEvents = "Live Events";
   static final String latestMovies = "Latest Movies";

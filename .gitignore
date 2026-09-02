@@ -137,3 +137,16 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+
+# Temp/debug PHP scripts
+add_top10_col.php
+check_top10.php
+debug_top10.php
+force_invalidate.php
+reset_opcache.php
+set_dev.php
+set_prod.php
+test_api.php
+test_top10.php
+user.ini
+PLAY_CONSOLE_UPDATE_GUIDE.md
