@@ -149,4 +149,6 @@ set_prod.php
 test_api.php
 test_top10.php
 user.ini
+count_channels.php
 PLAY_CONSOLE_UPDATE_GUIDE.md
+HANDOFF.md
