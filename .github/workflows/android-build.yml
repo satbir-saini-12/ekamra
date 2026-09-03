@@ -24,6 +24,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
+          flutter-version: '3.32.8'
           channel: stable
           cache: true
 
@@ -45,6 +46,12 @@ jobs:
 
       - name: Install dependencies
         run: flutter pub get
+
+      - name: Accept Android SDK licenses
+        run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+
+      - name: Install Android NDK
+        run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "ndk;28.0.12674087" || true
 
       - name: Run static analysis
         run: flutter analyze --no-fatal-infos
