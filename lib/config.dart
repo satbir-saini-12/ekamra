@@ -21,7 +21,7 @@ class Config {
   static final bool enableFacebookAuth = false;
   static final bool enableGoogleAuth = true;
   static final bool inAppPurchaseActivated = false;
-  static final bool enablePhoneAuth = true;
+  static final bool enablePhoneAuth = false;
   static final bool enableAppleAuthForIOS = true;
   //publicKeyBase64 from play store to implement in app purchase
   static final String publicKeyBase64 =
