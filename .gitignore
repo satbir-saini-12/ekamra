@@ -150,5 +150,18 @@ test_api.php
 test_top10.php
 user.ini
 count_channels.php
+setup_tv_db.php
+update_tv_config.php
 PLAY_CONSOLE_UPDATE_GUIDE.md
 HANDOFF.md
+
+# Android TV app
+android-tv/local.properties
+android-tv/app/local.properties
+android-tv/.gradle/
+android-tv/app/build/
+android-tv/build/
+android-tv/.cxx/
+android-tv/.idea/
+# Keep TV app keystore for signing
+!android-tv/keys/*.jks

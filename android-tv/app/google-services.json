@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "631611226659",
+    "project_id": "oxoo-tv-17a9c",
+    "storage_bucket": "oxoo-tv-17a9c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631611226659:android:6008739735501608630f96",
+        "android_client_info": {
+          "package_name": "com.ekamra.tv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "631611226659-a4fhn1hl7e147hpl75d0q4fbtrlft71u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ekamra.tv",
+            "certificate_hash": "c6e25ad9659b0d28ec2f0bb7a23ed0e49f732456"
+          }
+        },
+        {
+          "client_id": "631611226659-rolquksr9c203mqnfkfr0ka79f6p4i99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKiTdXZ-ND55YU28oBAwg5wGHaGDAJvpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "631611226659-rolquksr9c203mqnfkfr0ka79f6p4i99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

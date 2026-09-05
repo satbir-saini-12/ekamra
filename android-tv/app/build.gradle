@@ -1,0 +1,116 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id "org.jetbrains.kotlin.android" version "1.9.22" apply false
+}
+
+android {
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId "com.ekamra.tv"
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode 10
+        versionName "2.1.0"
+        multiDexEnabled = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        // Add this block for ABI filters
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
+
+    }
+
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+
+    ndkVersion = '21.3.6528147'
+    namespace = 'com.ekamra.tv'
+}
+
+dependencies {
+
+    implementation 'androidx.leanback:leanback:1.0.0'
+    implementation 'androidx.leanback:leanback-preference:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.github.bumptech.glide:glide:4.14.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.0'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+//    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    def room_version = "2.6.1"
+    def lifecycle_version = "2.5.1"
+    def arch_version = "2.1.0"
+    //Room
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    // optional - Guava support for Room, including Optional and ListenableFuture
+    implementation "androidx.room:room-guava:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+//rxJava
+//    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.18'
+    // retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.11.0'
+
+    implementation("com.google.guava:guava:31.1-android")
+    implementation 'androidx.palette:palette-ktx:1.0.0'
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.8'
+//    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+    //firebase
+//    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+    implementation platform('com.google.firebase:firebase-bom:33.3.0')
+    implementation 'com.firebaseui:firebase-ui-auth:7.1.1'
+    implementation 'com.google.firebase:firebase-analytics'
+    // exo player
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.19.1'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.19.1'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.19.1'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.19.1'
+    implementation 'com.google.android.exoplayer:extension-rtmp:2.19.1'
+    implementation 'com.google.android.exoplayer:extension-cast:2.19.1'
+
+}
+
+configurations.configureEach {
+    resolutionStrategy {
+        // Force specific versions for potentially conflicting libraries
+        force 'com.squareup.okhttp3:okhttp:4.11.0'  // Update version as necessary
+        force 'com.squareup.retrofit2:retrofit:2.9.0' // Update version as necessary
+        force 'com.google.firebase:firebase-analytics:21.0.0' // Update version as necessary
+        force 'com.google.android.exoplayer:exoplayer-core:2.19.1'  // Update version as necessary
+        force 'com.google.android.material:material:1.12.0' // Update version as necessary
+        force 'androidx.lifecycle:lifecycle-viewmodel:2.5.1' // Update version as necessary
+        force 'androidx.lifecycle:lifecycle-livedata:2.5.1' // Update version as necessary
+        force 'androidx.room:room-runtime:2.6.1' // Update version as necessary
+        force 'androidx.room:room-compiler:2.6.1' // Update version as necessary
+        force 'androidx.room:room-guava:2.6.1' // Update version as necessary
+        force 'androidx.room:room-rxjava2:2.6.1' // Update version as necessary
+    }
+}

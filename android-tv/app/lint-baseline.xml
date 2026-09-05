@@ -1,0 +1,3485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.2.2" type="baseline" client="gradle" dependencies="false" name="AGP (8.2.2)" variant="all" version="8.2.2">
+
+    <issue
+        id="LintError"
+        message="Unexpected failure during lint analysis of HomeActivity.java (this is a bug in lint or one of the libraries it depends on)&#xA;&#xA;Message: Incorrect type &apos;androidx/leanback/app/BaseSupportFragment&apos; (JDK_20)&#xA;&#xA;The crash seems to involve the detector `com.android.tools.lint.checks.PrivateApiDetector`.&#xA;You can try disabling it with something like this:&#xA;    android {&#xA;        lint {&#xA;            disable &quot;BlockedPrivateApi&quot;, &quot;DiscouragedPrivateApi&quot;, &quot;PrivateApi&quot;, &quot;SoonBlockedPrivateApi&quot;&#xA;        }&#xA;    }&#xA;&#xA;Stack: `IncorrectOperationException:PsiJavaParserFacadeImpl.newException(PsiJavaParserFacadeImpl.java:388)←PsiJavaParserFacadeImpl.createTypeElementFromText(PsiJavaParserFacadeImpl.java:231)←PsiJavaParserFacadeImpl.createTypeInner(PsiJavaParserFacadeImpl.java:240)←PsiElementFactoryImpl.createTypeFromText(PsiElementFactoryImpl.java:675)←PrivateApiDetector.getJavaClassType(PrivateApiDetector.kt:399)←PrivateApiDetector.getJavaClassType(PrivateApiDetector.kt:384)←PrivateApiDetector.getJavaClassFromMemberLookup(PrivateApiDetector.kt:341)←PrivateApiDetector.checkGetDeclaredMethod(PrivateApiDetector.kt:213)←PrivateApiDetector.visitMethodCall(PrivateApiDetector.kt:194)←UElementVisitor$DelegatingPsiVisitor.visitMethodCallExpression(UElementVisitor.kt:1082)←UElementVisitor$DelegatingPsiVisitor.visitCallExpression(UElementVisitor.kt:1062)←UCallExpression.accept(UCallExpression.kt:85)←UQualifiedReferenceExpression.accept(UQualifiedReferenceExpression.kt:34)←UVariableKt.visitContents(UVariable.kt:68)←UVariableKt.access$visitContents(UVariable.kt:1)←ULocalVariable.accept(UVariable.kt:123)←ImplementationUtilsKt.acceptList(implementationUtils.kt:15)←UDeclarationsExpression.accept(UDeclarationsExpression.kt:22)←ImplementationUtilsKt.acceptList(implementationUtils.kt:15)←UBlockExpression.accept(UBlockExpression.kt:21)←UIfExpression.accept(UIfExpression.kt:59)←ImplementationUtilsKt.acceptList(implementationUtils.kt:15)←UBlockExpression.accept(UBlockExpression.kt:21)←UTryExpression.accept(UTryExpression.kt:70)←ImplementationUtilsKt.acceptList(implementationUtils.kt:15)←UBlockExpression.accept(UBlockExpression.kt:21)←UMethod.accept(UMethod.kt:45)←ImplementationUtilsKt.acceptList(implementationUtils.kt:15)←UClass.accept(UClass.kt:64)←ImplementationUtilsKt.acceptList(implementationUtils.kt:15)←UFile.accept(UFile.kt:89)←UastLintUtilsKt.acceptSourceFile(UastLintUtils.kt:826)←UElementVisitor$visitFile$3.run(UElementVisitor.kt:267)←LintClient.runReadAction(LintClient.kt:1705)←LintDriver$LintClientWrapper.runReadAction(LintDriver.kt:2903)←UElementVisitor.visitFile(UElementVisitor.kt:264)←LintDriver$visitUastDetectors$1.run(LintDriver.kt:2179)←LintClient.runReadAction(LintClient.kt:1705)←LintDriver$LintClientWrapper.runReadAction(LintDriver.kt:2903)←LintDriver.visitUastDetectors(LintDriver.kt:2179)←LintDriver.visitUast(LintDriver.kt:2141)←LintDriver.runFileDetectors(LintDriver.kt:1387)←LintDriver.checkProject(LintDriver.kt:1152)←LintDriver.checkProjectRoot(LintDriver.kt:623)←LintDriver.access$checkProjectRoot(LintDriver.kt:172)←LintDriver$analyzeOnly$1.invoke(LintDriver.kt:446)←LintDriver$analyzeOnly$1.invoke(LintDriver.kt:443)←LintDriver.doAnalyze(LintDriver.kt:502)←LintDriver.analyzeOnly(LintDriver.kt:443)←LintCliClient$analyzeOnly$1.invoke(LintCliClient.kt:233)←LintCliClient$analyzeOnly$1.invoke(LintCliClient.kt:233)←LintCliClient.run(LintCliClient.kt:275)←LintCliClient.run$default(LintCliClient.kt:258)←LintCliClient.analyzeOnly(LintCliClient.kt:233)←Main.run(Main.java:1761)←Main.run(Main.java:284)←DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)←Method.invoke(Method.java:580)←AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:98)←AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:87)←AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:62)←DefaultWorkerServer.execute(DefaultWorkerServer.java:63)←NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)←NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)←ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)←NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)←AbstractWorker$1.call(AbstractWorker.java:44)←AbstractWorker$1.call(AbstractWorker.java:41)←DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)←DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)←DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)←DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)←DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)←DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)←DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)←AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)←NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)←DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:174)←FutureTask.run(FutureTask.java:317)←DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:194)←DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:127)←DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:169)←Factories$1.create(Factories.java:31)←DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)←DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)←DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)←DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:164)←DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:133)←Executors$RunnableAdapter.call(Executors.java:572)←FutureTask.run(FutureTask.java:317)←ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)←AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)←ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)←ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)←Thread.run(Thread.java:1575)`&#xA;&#xA;You can run with --stacktrace or set environment variable `LINT_PRINT_STACKTRACE=true` to dump a full stacktrace to stdout.">
+        <location
+            file="src/main/java/com/files/codes/view/HomeActivity.java"/>
+    </issue>
+
+    <issue
+        id="RecyclerView"
+        message="Do not treat position as fixed; only use immediately and call `holder.getAdapterPosition()` to look it up later"
+        errorLine1="    public void onBindViewHolder(@NonNull SubtitleViewHolder holder, int position) {"
+        errorLine2="                                                                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/adapter/SubtitleListAdapter.java"
+            line="37"
+            column="70"/>
+    </issue>
+
+    <issue
+        id="InconsistentLayout"
+        message="The id &quot;poster_image_view_for_tv&quot; in layout &quot;custom_exo_layout&quot; is missing from the following layout configurations: layout (present in layout-land)"
+        errorLine1="            android:id=&quot;@+id/poster_image_view_for_tv&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="27"
+            column="13"
+            message="Occurrence in layout-land"/>
+    </issue>
+
+    <issue
+        id="NotificationPermission"
+        message="When targeting Android 13 or higher, posting a permission requires holding the `POST_NOTIFICATIONS` permission (usage from com.bumptech.glide.request.target.NotificationTarget)">
+        <location
+            file="src/main/AndroidManifest.xml"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        errorLine1="        targetSdkVersion 34"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="13"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        errorLine1="        SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy:MM:dd:HH:mm&quot;);"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/utils/PreferenceUtils.java"
+            line="43"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates."
+        errorLine1="        SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy:MM:dd:HH:mm&quot;);"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/utils/PreferenceUtils.java"
+            line="59"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="    &lt;fragment"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_home_new.xml"
+            line="6"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="&lt;fragment xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2=" ~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/activity_item_country.xml"
+            line="2"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="&lt;fragment xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2=" ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_item_country.xml"
+            line="2"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="&lt;fragment xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2=" ~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/activity_item_genre.xml"
+            line="2"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="&lt;fragment xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2=" ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_item_genre.xml"
+            line="2"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="&lt;fragment xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2=" ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_search.xml"
+            line="3"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="&lt;fragment"
+        errorLine2=" ~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/activity_video_details.xml"
+            line="2"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        errorLine1="&lt;fragment xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2=" ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_video_details.xml"
+            line="2"
+            column="2"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        View view = inflater.inflate(R.layout.icon_header_item, null);"
+        errorLine2="                                                                ~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/IconHeaderItemPresenter.java"
+            line="37"
+            column="65"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        View custom_view = inflater.inflate(R.layout.toast_icon_text, null);"
+        errorLine2="                                                                      ~~~~">
+        <location
+            file="src/main/java/com/files/codes/utils/ToastMsg.java"
+            line="31"
+            column="71"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        errorLine1="        View custom_view = inflater.inflate(R.layout.toast_icon_text, null);"
+        errorLine2="                                                                      ~~~~">
+        <location
+            file="src/main/java/com/files/codes/utils/ToastMsg.java"
+            line="45"
+            column="71"/>
+    </issue>
+
+    <issue
+        id="InvalidSetHasFixedSize"
+        message="When using `setHasFixedSize() in an `RecyclerView`, `wrap_content` cannot be used as \&#xA;a value for `size` in the scrolling direction."
+        errorLine1="            serverRv.setHasFixedSize(true);"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/PlayerActivity.java"
+            line="337"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="InvalidSetHasFixedSize"
+        message="When using `setHasFixedSize() in an `RecyclerView`, `wrap_content` cannot be used as \&#xA;a value for `size` in the scrolling direction."
+        errorLine1="                serverRv.setHasFixedSize(true);"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/PlayerActivity.java"
+            line="393"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="InvalidSetHasFixedSize"
+        message="When using `setHasFixedSize() in an `RecyclerView`, `wrap_content` cannot be used as \&#xA;a value for `size` in the scrolling direction."
+        errorLine1="            serverRv.setHasFixedSize(true);"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/fragments/VideoDetailsFragment.java"
+            line="342"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RedundantLabel"
+        message="Redundant label can be removed"
+        errorLine1="            android:label=&quot;@string/app_name&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="97"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.0"
+        errorLine1="    implementation &apos;androidx.constraintlayout:constraintlayout:2.1.4&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="65"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel than 2.6.2 is available: 2.8.7"
+        errorLine1="    implementation &quot;androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="79"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata than 2.6.2 is available: 2.8.7"
+        errorLine1="    implementation &quot;androidx.lifecycle:lifecycle-livedata:$lifecycle_version&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="82"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of io.reactivex.rxjava2:rxjava than 2.2.18 is available: 2.2.20"
+        errorLine1="    implementation &apos;io.reactivex.rxjava2:rxjava:2.2.18&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="85"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.guava:guava than 31.1-android is available: 31.1-jre"
+        errorLine1="    implementation(&quot;com.google.guava:guava:31.1-android&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="91"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.squareup.picasso:picasso than 2.8 is available: 2.71828"
+        errorLine1="    implementation &apos;com.squareup.picasso:picasso:2.8&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="94"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.firebase:firebase-bom than 33.3.0 is available: 33.8.0"
+        errorLine1="    implementation platform(&apos;com.google.firebase:firebase-bom:33.3.0&apos;)"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="98"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.firebaseui:firebase-ui-auth than 7.1.1 is available: 8.0.2"
+        errorLine1="    implementation &apos;com.firebaseui:firebase-ui-auth:7.1.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="99"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TransitionHelper.createScene can only be called from within the same library group (referenced groupId=`androidx.leanback` from groupId=`oxoo-tv`)"
+        errorLine1="        mSceneAfterEntranceTransition = TransitionHelper.createScene(gridDock, new Runnable() {"
+        errorLine2="                                                         ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/fragments/testFolder/GridFragment.java"
+            line="151"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="PrivateResource"
+        message="The resource `@style/ExoMediaButton` is marked as private in com.google.android.exoplayer:exoplayer-ui:2.19.1"
+        errorLine1="            style=&quot;@style/ExoMediaButton&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="89"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="PrivateResource"
+        message="The resource `@style/ExoMediaButton` is marked as private in com.google.android.exoplayer:exoplayer-ui:2.19.1"
+        errorLine1="            style=&quot;@style/ExoMediaButton&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="100"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="PrivateResource"
+        message="The resource `@style/ExoMediaButton` is marked as private in com.google.android.exoplayer:exoplayer-ui:2.19.1"
+        errorLine1="            style=&quot;@style/ExoMediaButton&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="105"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="PrivateResource"
+        message="The resource `@style/ExoMediaButton` is marked as private in com.google.android.exoplayer:exoplayer-ui:2.19.1"
+        errorLine1="            style=&quot;@style/ExoMediaButton&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="116"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="        return context.getResources().getIdentifier(getLocalImageResourceName(), &quot;drawable&quot;,"
+        errorLine2="                                      ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/customCard/Card.java"
+            line="136"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="            return context.getResources().getIdentifier(getLocalImageResourceName(), &quot;drawable&quot;,"
+        errorLine2="                                          ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/fragments/testFolder/HomeNewFragment.java"
+            line="454"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="                    .getIdentifier(card.getLocalImageResourceName(),"
+        errorLine2="                     ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/fragments/testFolder/ImageCardViewPresenter.java"
+            line="61"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            mDefaultCardImage = mContext"
+        errorLine2="                                ^">
+        <location
+            file="src/main/java/com/files/codes/CardPresenter.java"
+            line="69"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            mDefaultCardImage = mContext"
+        errorLine2="                                ^">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/EpisodPresenter.java"
+            line="151"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            Drawable icon = rootView.getResources().getDrawable(iconResId, null);"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/IconHeaderItemPresenter.java"
+            line="53"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            mDefaultCardImage = mContext"
+        errorLine2="                                ^">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/LiveTvCardPresenter.java"
+            line="62"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="                mCardView.setBadgeImage(mContext.getResources().getDrawable(R.drawable.ic_close));"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/LiveTvCardPresenter.java"
+            line="73"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            mDefaultCardImage = mContext"
+        errorLine2="                                ^">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/RelatedPresenter.java"
+            line="88"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            mDefaultCardImage = mContext"
+        errorLine2="                                ^">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/SearchCardPresenter.java"
+            line="64"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            mDefaultCardImage = mContext"
+        errorLine2="                                ^">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/SliderCardPresenter.java"
+            line="65"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            mDefaultCardImage = mContext"
+        errorLine2="                                ^">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/TvPresenter.java"
+            line="62"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            mDefaultCardImage = mContext"
+        errorLine2="                                ^">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/TvSearchPresenter.java"
+            line="63"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="            mDefaultCardImage = mContext"
+        errorLine2="                                ^">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/VerticalCardPresenter.java"
+            line="90"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`"
+        errorLine1="                descriptionTv.setCompoundDrawables(context.getResources().getDrawable(R.drawable.ic_fiber_manual_record_red), null, null, null);"
+        errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/VideoDetailsViewHolder.java"
+            line="126"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`"
+        errorLine1="            android:drawableStart=&quot;@drawable/ic_fiber_manual_record_red&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="122"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UseCompatTextViewDrawableXml"
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`"
+        errorLine1="            android:drawableStart=&quot;@drawable/ic_fiber_manual_record_red&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="130"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="Wakelock"
+        message="Wakelocks should be released in `onPause`, not `onDestroy`"
+        errorLine1="            wakeLock.release();"
+        errorLine2="                     ~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/PlayerActivity.java"
+            line="629"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 21"
+        errorLine1="    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/IconHeaderItemPresenter.java"
+            line="44"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 19"
+        errorLine1="    @RequiresApi(api = Build.VERSION_CODES.KITKAT)"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/VideoDetailsViewHolder.java"
+            line="55"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields; this is a memory leak"
+        errorLine1="    private static Context mContext;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/EpisodPresenter.java"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields; this is a memory leak"
+        errorLine1="    private static Context mContext;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/LiveTvCardPresenter.java"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields; this is a memory leak"
+        errorLine1="    private static Activity mContext;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/RelatedPresenter.java"
+            line="27"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields; this is a memory leak"
+        errorLine1="    private static Context mContext;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/SearchCardPresenter.java"
+            line="25"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields; this is a memory leak"
+        errorLine1="    private static Context mContext;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/SliderCardPresenter.java"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="This field leaks a context object"
+        errorLine1="    private Context context;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/service/SubscriptionStatusUpdateTask.java"
+            line="20"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields; this is a memory leak"
+        errorLine1="    private static Context mContext;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/TvPresenter.java"
+            line="22"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields; this is a memory leak"
+        errorLine1="    private static Context mContext;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/TvSearchPresenter.java"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields; this is a memory leak"
+        errorLine1="    private static Context mContext;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/presenter/VerticalCardPresenter.java"
+            line="31"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MergeRootFrame"
+        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag"
+        errorLine1="&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/layout/activity_details.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="MergeRootFrame"
+        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag"
+        errorLine1="&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/layout/activity_home_new.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@drawable/tv_bg` with a theme that also paints a background (inferred theme is `@style/Theme.OXOOTVDemo`)"
+        errorLine1="    android:background=&quot;@drawable/tv_bg&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/activity_login.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@drawable/tv_bg` with a theme that also paints a background (inferred theme is `@style/Theme.OXOOTVDemo`)"
+        errorLine1="    android:background=&quot;@drawable/tv_bg&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_login.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@drawable/tv_bg` with a theme that also paints a background (inferred theme is `@style/Theme.OXOOTVDemo`)"
+        errorLine1="    android:background=&quot;@drawable/tv_bg&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/activity_login_chooser.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@drawable/tv_bg` with a theme that also paints a background (inferred theme is `@style/Theme.OXOOTVDemo`)"
+        errorLine1="    android:background=&quot;@drawable/tv_bg&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_login_chooser.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@drawable/tv_bg` with a theme that also paints a background (inferred theme is `@style/Theme.OXOOTVDemo`)"
+        errorLine1="    android:background=&quot;@drawable/tv_bg&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/activity_sign_up.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@drawable/tv_bg` with a theme that also paints a background (inferred theme is `@style/Theme.OXOOTVDemo`)"
+        errorLine1="    android:background=&quot;@drawable/tv_bg&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_sign_up.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/splashScreenColor` with a theme that also paints a background (inferred theme is `@style/Theme.OXOOTVDemo`)"
+        errorLine1="    android:background=&quot;@color/splashScreenColor&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/fragment_splash.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/splashScreenColor` with a theme that also paints a background (inferred theme is `@style/Theme.OXOOTVDemo`)"
+        errorLine1="    android:background=&quot;@color/splashScreenColor&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_splash.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.OXOOTVDemo`)"
+        errorLine1="    android:background=&quot;@android:color/white&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/login_alert_dialog.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.OXOOTVDemo`)"
+        errorLine1="    android:background=&quot;@android:color/white&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/login_alert_dialog.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.OXOOTVDemo`)"
+        errorLine1="    android:background=&quot;@android:color/white&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/paid_alert_dialog.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.OXOOTVDemo`)"
+        errorLine1="    android:background=&quot;@android:color/white&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/paid_alert_dialog.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.fastlane_background` appears to be unused"
+        errorLine1="    &lt;color name=&quot;fastlane_background&quot;>#0096a6&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="4"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.search_opaque` appears to be unused"
+        errorLine1="    &lt;color name=&quot;search_opaque&quot;>#ffaa3f&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.default_background` appears to be unused"
+        errorLine1="    &lt;color name=&quot;default_background&quot;>#3d3d3d&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.grey_20` appears to be unused"
+        errorLine1="    &lt;color name=&quot;grey_20&quot;>#cccccc&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="21"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.grey_40` appears to be unused"
+        errorLine1="    &lt;color name=&quot;grey_40&quot;>#999999&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="22"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.overlay_dark_30` appears to be unused"
+        errorLine1="    &lt;color name=&quot;overlay_dark_30&quot;>#4D000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="28"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.overlay_dark_40` appears to be unused"
+        errorLine1="    &lt;color name=&quot;overlay_dark_40&quot;>#66000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="29"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.overlay_dark_90` appears to be unused"
+        errorLine1="    &lt;color name=&quot;overlay_dark_90&quot;>#E6000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="30"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.black_30` appears to be unused"
+        errorLine1="    &lt;color name=&quot;black_30&quot;>#99000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="32"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.blue_grey_300` appears to be unused"
+        errorLine1="    &lt;color name=&quot;blue_grey_300&quot;>#90A4AE&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="38"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.red_400` appears to be unused"
+        errorLine1="    &lt;color name=&quot;red_400&quot;>#EF5350&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="39"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.indigo_400` appears to be unused"
+        errorLine1="    &lt;color name=&quot;indigo_400&quot;>#5C6BC0&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="40"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.light_green_400` appears to be unused"
+        errorLine1="    &lt;color name=&quot;light_green_400&quot;>#9CCC65&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="41"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.blue_400` appears to be unused"
+        errorLine1="    &lt;color name=&quot;blue_400&quot;>#42A5F5&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="42"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.orange_400` appears to be unused"
+        errorLine1="    &lt;color name=&quot;orange_400&quot;>#FFA726&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="43"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.blue_grey_400` appears to be unused"
+        errorLine1="    &lt;color name=&quot;blue_grey_400&quot;>#78909C&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="44"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.grey_400` appears to be unused"
+        errorLine1="    &lt;color name=&quot;grey_400&quot;>#BDBDBD&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="45"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.black_overlay` appears to be unused"
+        errorLine1="    &lt;color name=&quot;black_overlay&quot;>#66000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="46"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.light_theme_color` appears to be unused"
+        errorLine1="    &lt;color name=&quot;light_theme_color&quot;>#FFFFFF&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="47"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.badge_background_color` appears to be unused"
+        errorLine1="    &lt;color name=&quot;badge_background_color&quot;>#f44336&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="48"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.rsb_trackSelectedDefaultColor` appears to be unused"
+        errorLine1="    &lt;color name=&quot;rsb_trackSelectedDefaultColor&quot;>#fefefe&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="49"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.spacing_medium` appears to be unused"
+        errorLine1="    &lt;dimen name=&quot;spacing_medium&quot;>5dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.spacing_xlarge` appears to be unused"
+        errorLine1="    &lt;dimen name=&quot;spacing_xlarge&quot;>35dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="10"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.spacing_xxlarge` appears to be unused"
+        errorLine1="    &lt;dimen name=&quot;spacing_xxlarge&quot;>50dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="11"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.lb_details_v2_card_height` appears to be unused"
+        errorLine1="    &lt;dimen name=&quot;lb_details_v2_card_height&quot;>430dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="12"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_baseline_account_circle_24` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_baseline_account_circle_24.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_favorite_border_white_24dp` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_favorite_border_white_24dp.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.ic_launcher_background` appears to be unused"
+        errorLine1="    &lt;color name=&quot;ic_launcher_background&quot;>#FFFFFF&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/ic_launcher_background.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_launcher_round` appears to be unused"
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_launcher_round_adaptive_back` appears to be unused">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_launcher_round_adaptive_fore` appears to be unused">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round_adaptive_fore.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.movie` appears to be unused">
+        <location
+            file="src/main/res/drawable/movie.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.browse_title` appears to be unused"
+        errorLine1="    &lt;string name=&quot;browse_title&quot;>Videos by Your Company&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="3"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.grid_view` appears to be unused"
+        errorLine1="    &lt;string name=&quot;grid_view&quot;>Grid View&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="5"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.error_fragment` appears to be unused"
+        errorLine1="    &lt;string name=&quot;error_fragment&quot;>Error Fragment&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="6"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.personal_settings` appears to be unused"
+        errorLine1="    &lt;string name=&quot;personal_settings&quot;>Personal Settings&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="7"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.featured_tv_channels` appears to be unused"
+        errorLine1="    &lt;string name=&quot;featured_tv_channels&quot;>Featured Tv Channel&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="30"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.latest_movie` appears to be unused"
+        errorLine1="    &lt;string name=&quot;latest_movie&quot;>Latest Movies&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="31"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.latest_tv_series` appears to be unused"
+        errorLine1="    &lt;string name=&quot;latest_tv_series&quot;>Latest Tv Series&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="32"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.more` appears to be unused"
+        errorLine1="    &lt;string name=&quot;more&quot;>More&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="33"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.live_tv` appears to be unused"
+        errorLine1="    &lt;string name=&quot;live_tv&quot;>Live TV&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.tv_series` appears to be unused"
+        errorLine1="    &lt;string name=&quot;tv_series&quot;>Series&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="36"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.country` appears to be unused"
+        errorLine1="    &lt;string name=&quot;country&quot;>Country&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.genre` appears to be unused"
+        errorLine1="    &lt;string name=&quot;genre&quot;>Genre&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="38"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.favorite` appears to be unused"
+        errorLine1="    &lt;string name=&quot;favorite&quot;>Favorite&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="39"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.search` appears to be unused"
+        errorLine1="    &lt;string name=&quot;search&quot;>Search&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="41"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.no_item_found` appears to be unused"
+        errorLine1="    &lt;string name=&quot;no_item_found&quot;>No item found&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="42"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.cast_n_crew` appears to be unused"
+        errorLine1="    &lt;string name=&quot;cast_n_crew&quot;>Cast and Crew&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="43"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.signin` appears to be unused"
+        errorLine1="    &lt;string name=&quot;signin&quot;>Signin&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="44"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.reset` appears to be unused"
+        errorLine1="    &lt;string name=&quot;reset&quot;>Reset Password&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="45"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.register` appears to be unused"
+        errorLine1="    &lt;string name=&quot;register&quot;>Register&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="46"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.full_name` appears to be unused"
+        errorLine1="    &lt;string name=&quot;full_name&quot;>Full Name&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="47"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.email` appears to be unused"
+        errorLine1="    &lt;string name=&quot;email&quot;>Email&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="48"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.save` appears to be unused"
+        errorLine1="    &lt;string name=&quot;save&quot;>Save&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="50"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.director` appears to be unused"
+        errorLine1="    &lt;string name=&quot;director&quot;>Director :&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="51"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.comments` appears to be unused"
+        errorLine1="    &lt;string name=&quot;comments&quot;>Comments&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="52"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.your_comments` appears to be unused"
+        errorLine1="    &lt;string name=&quot;your_comments&quot;>Your Comments&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="53"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.add_comments` appears to be unused"
+        errorLine1="    &lt;string name=&quot;add_comments&quot;>Add Comments&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="54"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.no_internet` appears to be unused"
+        errorLine1="    &lt;string name=&quot;no_internet&quot;>No internet connection !&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="55"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.copyright` appears to be unused"
+        errorLine1="    &lt;string name=&quot;copyright&quot;>Copyright&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="56"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.contact_us` appears to be unused"
+        errorLine1="    &lt;string name=&quot;contact_us&quot;>Contact Us&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="57"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.title_activity_item_show` appears to be unused"
+        errorLine1="    &lt;string name=&quot;title_activity_item_show&quot;>ItemShowActivity&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="58"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.title_activity_details` appears to be unused"
+        errorLine1="    &lt;string name=&quot;title_activity_details&quot;>DetailsActivity&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="59"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.title_activity_reply` appears to be unused"
+        errorLine1="    &lt;string name=&quot;title_activity_reply&quot;>ReplyActivity&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="60"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.program_guide` appears to be unused"
+        errorLine1="    &lt;string name=&quot;program_guide&quot;>Program Guide&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="63"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.watching_on` appears to be unused"
+        errorLine1="    &lt;string name=&quot;watching_on&quot;>Watching live on&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="65"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.all_tv_channel` appears to be unused"
+        errorLine1="    &lt;string name=&quot;all_tv_channel&quot;>All TV Channels&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="66"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.you_may_also_like` appears to be unused"
+        errorLine1="    &lt;string name=&quot;you_may_also_like&quot;>You may also like&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="67"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.dark_mode` appears to be unused"
+        errorLine1="    &lt;string name=&quot;dark_mode&quot;>Dark Mode&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="68"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.tv_channels` appears to be unused"
+        errorLine1="    &lt;string name=&quot;tv_channels&quot;>Tv Channels&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="69"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.watching_catch_up_tv` appears to be unused"
+        errorLine1="    &lt;string name=&quot;watching_catch_up_tv&quot;>Watching Catch-up TV&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="70"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.deactive_account_text` appears to be unused"
+        errorLine1="    &lt;string name=&quot;deactive_account_text&quot;>If you do not want to use this account you can de-active easily.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="71"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.reason_to_deactivate_account` appears to be unused"
+        errorLine1="    &lt;string name=&quot;reason_to_deactivate_account&quot;>Reason to deactivate account&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="72"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.enter_password` appears to be unused"
+        errorLine1="    &lt;string name=&quot;enter_password&quot;>Enter Password&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="73"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.long_text` appears to be unused"
+        errorLine1="    &lt;string name=&quot;long_text&quot;>Aliquam eu mauris lectus. Pellentesque lacinia ut urna ut gravida. Proin libero sem, auctor in posuere sit amet&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="74"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.comment_empty` appears to be unused"
+        errorLine1="    &lt;string name=&quot;comment_empty&quot;>Comment can not empty&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="79"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.deactivate_account` appears to be unused"
+        errorLine1="    &lt;string name=&quot;deactivate_account&quot;>Deactivate Account&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="81"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.explore_by_genre` appears to be unused"
+        errorLine1="    &lt;string name=&quot;explore_by_genre&quot;>Explore By Genre&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="82"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.explore_by_country` appears to be unused"
+        errorLine1="    &lt;string name=&quot;explore_by_country&quot;>Explore By Country&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="83"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.share_this_app` appears to be unused"
+        errorLine1="    &lt;string name=&quot;share_this_app&quot;>Share This App&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="84"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.connect_to_tv` appears to be unused"
+        errorLine1="    &lt;string name=&quot;connect_to_tv&quot;>Connect to TV&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="85"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.share_body` appears to be unused"
+        errorLine1="    &lt;string name=&quot;share_body&quot;>I would like to share this TV &amp;amp; Movie App.  Here you can download this from playstore :\n    https://play.google.com/store/apps/details?id=&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="86"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.term_of_services` appears to be unused"
+        errorLine1="    &lt;string name=&quot;term_of_services&quot;>Term of Services&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="87"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.accept` appears to be unused"
+        errorLine1="    &lt;string name=&quot;accept&quot;>Accept&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="88"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.decline` appears to be unused"
+        errorLine1="    &lt;string name=&quot;decline&quot;>Decline&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="89"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.account_deactivate_info` appears to be unused"
+        errorLine1="    &lt;string name=&quot;account_deactivate_info&quot;>&lt;![CDATA[Your account will be deactivate &amp; only admin can activate again.]]&gt;&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="90"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.regular_program` appears to be unused"
+        errorLine1="    &lt;string name=&quot;regular_program&quot;>Regular Program&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="91"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.international` appears to be unused"
+        errorLine1="    &lt;string name=&quot;international&quot;>International&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="92"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.server` appears to be unused"
+        errorLine1="    &lt;string name=&quot;server&quot;>Server&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="93"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string._1080p` appears to be unused"
+        errorLine1="    &lt;string name=&quot;_1080p&quot;>1080P&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="94"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.dummy_name` appears to be unused"
+        errorLine1="    &lt;string name=&quot;dummy_name&quot;>Jhon Doe&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.notifications` appears to be unused"
+        errorLine1="    &lt;string name=&quot;notifications&quot;>NOTIFICATIONS&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="96"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.push_notification` appears to be unused"
+        errorLine1="    &lt;string name=&quot;push_notification&quot;>Push Notification&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="97"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.others` appears to be unused"
+        errorLine1="    &lt;string name=&quot;others&quot;>OTHERS&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="98"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.no_subscription_history` appears to be unused"
+        errorLine1="    &lt;string name=&quot;no_subscription_history&quot;>No subscription history found.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="101"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.plan` appears to be unused"
+        errorLine1="    &lt;string name=&quot;plan&quot;>Plan&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="102"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.no_active_subscription_found` appears to be unused"
+        errorLine1="    &lt;string name=&quot;no_active_subscription_found&quot;>No active subscription found.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="103"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.upgrade_membership` appears to be unused"
+        errorLine1="    &lt;string name=&quot;upgrade_membership&quot;>Upgrade Membership&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="104"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.p_date` appears to be unused"
+        errorLine1="    &lt;string name=&quot;p_date&quot;>P.Date&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="105"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.from` appears to be unused"
+        errorLine1="    &lt;string name=&quot;from&quot;>From&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="106"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.to` appears to be unused"
+        errorLine1="    &lt;string name=&quot;to&quot;>To&lt;/string>"
+        errorLine2="            ~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="107"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.action` appears to be unused"
+        errorLine1="    &lt;string name=&quot;action&quot;>Action&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="108"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.status` appears to be unused"
+        errorLine1="    &lt;string name=&quot;status&quot;>Status&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="109"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.by_tapping_the_button_you_agree_to_oxxo_term_amp_condition_and_privacy_policy` appears to be unused"
+        errorLine1="    &lt;string name=&quot;by_tapping_the_button_you_agree_to_oxxo_term_amp_condition_and_privacy_policy&quot;>&lt;![CDATA[By tapping the button, you agree to Oxxo Term &amp; Condition and Privacy Policy.]]&gt;&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="110"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.paid_content` appears to be unused"
+        errorLine1="    &lt;string name=&quot;paid_content&quot;>You are trying to watch a paid content. Please subscribe a plan first.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="113"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.subscribe_text` appears to be unused"
+        errorLine1="    &lt;string name=&quot;subscribe_text&quot;>Subscribe&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="115"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.payment_success` appears to be unused"
+        errorLine1="    &lt;string name=&quot;payment_success&quot;>Payment Success.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="116"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.invalid_card` appears to be unused"
+        errorLine1="    &lt;string name=&quot;invalid_card&quot;>Invalid card&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="117"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.subscribe_error` appears to be unused"
+        errorLine1="    &lt;string name=&quot;subscribe_error&quot;>To subscribe a plan, you have to login first.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="118"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.something_went_text` appears to be unused"
+        errorLine1="    &lt;string name=&quot;something_went_text&quot;>Something went wrong, try again or contact to your developer.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="119"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.go_back` appears to be unused"
+        errorLine1="    &lt;string name=&quot;go_back&quot;>Go Back&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="120"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.cvv` appears to be unused"
+        errorLine1="    &lt;string name=&quot;cvv&quot;>CVV&lt;/string>"
+        errorLine2="            ~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="121"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.mm_yy` appears to be unused"
+        errorLine1="    &lt;string name=&quot;mm_yy&quot;>MM/YY&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="122"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.card_number` appears to be unused"
+        errorLine1="    &lt;string name=&quot;card_number&quot;>Card Number&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="123"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.downloading` appears to be unused"
+        errorLine1="    &lt;string name=&quot;downloading&quot;>Downloading&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="124"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.download_completed` appears to be unused"
+        errorLine1="    &lt;string name=&quot;download_completed&quot;>Download Completed&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="125"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.watch_now` appears to be unused"
+        errorLine1="    &lt;string name=&quot;watch_now&quot;>Watch Now&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="126"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.download` appears to be unused"
+        errorLine1="    &lt;string name=&quot;download&quot;>Download&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="127"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.buy_any_subscription_below_and_enjoy_oxoo_prime` appears to be unused"
+        errorLine1="    &lt;string name=&quot;buy_any_subscription_below_and_enjoy_oxoo_prime&quot;>Buy any subscription below and enjoy mytvonline prime features.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="130"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.all_tv_channels` appears to be unused"
+        errorLine1="    &lt;string name=&quot;all_tv_channels&quot;>TV Channels&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="131"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.all_kids_videos` appears to be unused"
+        errorLine1="    &lt;string name=&quot;all_kids_videos&quot;>All Kids Videos&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="132"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.all_tv_series` appears to be unused"
+        errorLine1="    &lt;string name=&quot;all_tv_series&quot;>All TV Series&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="133"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.unlimited_movies` appears to be unused"
+        errorLine1="    &lt;string name=&quot;unlimited_movies&quot;>Unlimited Movies&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="134"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.please_select_your_payment_method` appears to be unused"
+        errorLine1="    &lt;string name=&quot;please_select_your_payment_method&quot;>Please select your payment method&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="135"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.download_appear_text` appears to be unused"
+        errorLine1="    &lt;string name=&quot;download_appear_text&quot;>Your download item will be appear here.  Download item not found.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="136"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.send` appears to be unused"
+        errorLine1="    &lt;string name=&quot;send&quot;>Send&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="137"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.searcError_message` appears to be unused"
+        errorLine1="    &lt;string name=&quot;searcError_message&quot;>Title And Type can\&apos;t be empty&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="138"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.external_download_links` appears to be unused"
+        errorLine1="    &lt;string name=&quot;external_download_links&quot;>External Download Links:&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="139"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.rating` appears to be unused"
+        errorLine1="    &lt;string name=&quot;rating&quot;>Rating&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="140"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.hello_blank_fragment` appears to be unused"
+        errorLine1="    &lt;string name=&quot;hello_blank_fragment&quot;>Hello blank fragment&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="143"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.enter_your_activation_code` appears to be unused"
+        errorLine1="    &lt;string name=&quot;enter_your_activation_code&quot;>Enter your activation code&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="147"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.enter_code` appears to be unused"
+        errorLine1="    &lt;string name=&quot;enter_code&quot;>Enter code here&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="148"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.get_activation_code_following` appears to be unused"
+        errorLine1="    &lt;string name=&quot;get_activation_code_following&quot;>Follow bellow steps to get code:&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="149"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.instruction_2` appears to be unused"
+        errorLine1="    &lt;string name=&quot;instruction_2&quot;>2. Then go to Settings.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="150"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.instruction_3` appears to be unused"
+        errorLine1="    &lt;string name=&quot;instruction_3&quot;>3. Then click on &quot;Connect To TV.&quot;&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="151"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.connect` appears to be unused"
+        errorLine1="    &lt;string name=&quot;connect&quot;>Connect&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="153"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.connecting` appears to be unused"
+        errorLine1="    &lt;string name=&quot;connecting&quot;>Connecting...&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="158"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.enter_below_code_on_your_tv` appears to be unused"
+        errorLine1="    &lt;string name=&quot;enter_below_code_on_your_tv&quot;>Enter below code on your TV&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="170"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.all_radio_channels` appears to be unused"
+        errorLine1="    &lt;string name=&quot;all_radio_channels&quot;>All Radio Channels&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="171"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.listening_on` appears to be unused"
+        errorLine1="    &lt;string name=&quot;listening_on&quot;>Listening on&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="172"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.type_keyword` appears to be unused"
+        errorLine1="    &lt;string name=&quot;type_keyword&quot;>Type keyword&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="173"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.year_range` appears to be unused"
+        errorLine1="    &lt;string name=&quot;year_range&quot;>Year Range&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="174"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.cancel` appears to be unused"
+        errorLine1="    &lt;string name=&quot;cancel&quot;>Cancel&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="175"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.tv_category` appears to be unused"
+        errorLine1="    &lt;string name=&quot;tv_category&quot;>TV Category&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="176"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.all_countries` appears to be unused"
+        errorLine1="    &lt;string name=&quot;all_countries&quot;>All Countries&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="178"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.all_categories` appears to be unused"
+        errorLine1="    &lt;string name=&quot;all_categories&quot;>All Categories&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="179"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.external_download` appears to be unused"
+        errorLine1="    &lt;string name=&quot;external_download&quot;>External Download&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="180"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.inApp_download` appears to be unused"
+        errorLine1="    &lt;string name=&quot;inApp_download&quot;>In App Download&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="181"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.select_download_server` appears to be unused"
+        errorLine1="    &lt;string name=&quot;select_download_server&quot;>Select Download Server&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="182"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.all_genres` appears to be unused"
+        errorLine1="    &lt;string name=&quot;all_genres&quot;>All Genres&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="183"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.embed_not_supported` appears to be unused"
+        errorLine1="    &lt;string name=&quot;embed_not_supported&quot;>Embed file is not supported.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="187"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.now_playing_channel_description` appears to be unused"
+        errorLine1="    &lt;string name=&quot;now_playing_channel_description&quot;>Shows what music is currently playing&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="189"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.now_playing_channel_name` appears to be unused"
+        errorLine1="    &lt;string name=&quot;now_playing_channel_name&quot;>Now Playing&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="190"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.recommended_for_you` appears to be unused"
+        errorLine1="    &lt;string name=&quot;recommended_for_you&quot;>Movies For You&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="191"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.tv_logo_white` appears to be unused">
+        <location
+            file="src/main/res/drawable/tv_logo_white.png"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `LinearLayout` parent is unnecessary"
+        errorLine1="            &lt;LinearLayout"
+        errorLine2="             ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/activity_sign_up.xml"
+            line="45"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `LinearLayout` parent is unnecessary"
+        errorLine1="            &lt;LinearLayout"
+        errorLine2="             ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_sign_up.xml"
+            line="45"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        errorLine1="    &lt;string name=&quot;connecting&quot;>Connecting...&lt;/string>"
+        errorLine2="                              ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="158"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="src/main/res/drawable/app_icon_your_company.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher_round_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher_round_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher_round_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher_round_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        message="The application adaptive icon is missing a monochrome tag"
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/app_icon_your_company.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/app_icon_your_company.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/logo.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/logo.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/logo_dark.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/logo_dark.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/movie.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/movie.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/poster_placeholder.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/poster_placeholder.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/tv_bg.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/tv_bg.jpg"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/tv_logo_white.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/tv_logo_white.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_adaptive_back.png, ic_launcher_round_adaptive_back.png">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round_adaptive_back.png"/>
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_adaptive_back.png, ic_launcher_round_adaptive_back.png">
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher_round_adaptive_back.png"/>
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_adaptive_back.png, ic_launcher_round_adaptive_back.png">
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher_round_adaptive_back.png"/>
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_adaptive_back.png, ic_launcher_round_adaptive_back.png">
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher_round_adaptive_back.png"/>
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        message="The following unrelated icon files have identical contents: ic_launcher_adaptive_back.png, ic_launcher_round_adaptive_back.png">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher_round_adaptive_back.png"/>
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher_adaptive_back.png"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/activity_sign_up.xml"
+            line="84"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_sign_up.xml"
+            line="84"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_sign_up.xml"
+            line="94"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/activity_sign_up.xml"
+            line="96"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_sign_up.xml"
+            line="103"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/activity_sign_up.xml"
+            line="107"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="KtxExtensionAvailable"
+        message="Add suffix `-ktx` to enable the Kotlin extensions for this library"
+        errorLine1="    implementation &quot;androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="79"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="KtxExtensionAvailable"
+        message="Add suffix `-ktx` to enable the Kotlin extensions for this library"
+        errorLine1="    implementation &quot;androidx.lifecycle:lifecycle-livedata:$lifecycle_version&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="82"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/activity_sign_up.xml"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_sign_up.xml"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="65"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="74"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="80"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="84"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="89"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="96"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="99"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="107"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="110"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="121"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/fragment_splash.xml"
+            line="11"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_splash.xml"
+            line="11"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="        android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/icon_header_item.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="        android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/icon_header_item.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/login_alert_dialog.xml"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/login_alert_dialog.xml"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/paid_alert_dialog.xml"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/paid_alert_dialog.xml"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/toast_icon_text.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Empty `contentDescription` attribute on image"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/toast_icon_text.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                releaseDateTv.setText(&quot;Release Date : &quot; + movie.getRelease());"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/VideoDetailsViewHolder.java"
+            line="65"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                releaseDateTv.setText(&quot;Release Date : &quot; + movie.getRelease());"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/VideoDetailsViewHolder.java"
+            line="65"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                descriptionTv.setText(&quot;You are watching on &quot; + context.getResources().getString(R.string.app_name));"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/VideoDetailsViewHolder.java"
+            line="125"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                descriptionTv.setText(&quot;You are watching on &quot; + context.getResources().getString(R.string.app_name));"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/files/codes/view/VideoDetailsViewHolder.java"
+            line="125"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/activity_sign_up.xml"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_sign_up.xml"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="65"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="74"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="80"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="84"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="89"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="96"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="99"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/custom_exo_layout.xml"
+            line="107"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="110"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/custom_exo_layout.xml"
+            line="121"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="        android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/icon_header_item.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="        android:contentDescription=&quot;TODO&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/icon_header_item.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/login_alert_dialog.xml"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/login_alert_dialog.xml"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Login Required&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Login Required&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/login_alert_dialog.xml"
+            line="32"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Login Required&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Login Required&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/login_alert_dialog.xml"
+            line="32"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Login&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Login&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/login_alert_dialog.xml"
+            line="83"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Login&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Login&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/login_alert_dialog.xml"
+            line="83"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/paid_alert_dialog.xml"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/paid_alert_dialog.xml"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout-land/toast_icon_text.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TODO&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;TODO&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/toast_icon_text.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="        android:layout_gravity=&quot;left&quot;>"
+        errorLine2="                                ~~~~">
+        <location
+            file="src/main/res/layout-land/activity_sign_up.xml"
+            line="15"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="        android:layout_gravity=&quot;left&quot;>"
+        errorLine2="                                ~~~~">
+        <location
+            file="src/main/res/layout/activity_sign_up.xml"
+            line="15"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="        android:gravity=&quot;left&quot;"
+        errorLine2="                         ~~~~">
+        <location
+            file="src/main/res/layout-land/fragment_my_account.xml"
+            line="26"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="        android:gravity=&quot;left&quot;"
+        errorLine2="                         ~~~~">
+        <location
+            file="src/main/res/layout/fragment_my_account.xml"
+            line="26"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            android:gravity=&quot;right&quot;>"
+        errorLine2="                             ~~~~~">
+        <location
+            file="src/main/res/layout-land/fragment_my_account.xml"
+            line="39"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            android:gravity=&quot;right&quot;>"
+        errorLine2="                             ~~~~~">
+        <location
+            file="src/main/res/layout/fragment_my_account.xml"
+            line="39"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            android:gravity=&quot;left&quot;>"
+        errorLine2="                             ~~~~">
+        <location
+            file="src/main/res/layout-land/fragment_my_account.xml"
+            line="80"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales"
+        errorLine1="            android:gravity=&quot;left&quot;>"
+        errorLine2="                             ~~~~">
+        <location
+            file="src/main/res/layout/fragment_my_account.xml"
+            line="80"
+            column="30"/>
+    </issue>
+
+</issues>
