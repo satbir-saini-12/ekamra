@@ -31,12 +31,12 @@ android {
         release {
             def keystorePath = System.getenv("KEYSTORE_PATH") ?: "../keys/ekamra-tv.jks"
             def keystorePass = System.getenv("KEYSTORE_PASSWORD") ?: "EkamraTV2026"
-            def keyAlias = System.getenv("KEY_ALIAS") ?: "ekamra-tv"
-            def keyPass = System.getenv("KEY_PASSWORD") ?: "EkamraTV2026"
+            def aliasName = System.getenv("KEY_ALIAS") ?: "ekamra-tv"
+            def keyPasswd = System.getenv("KEY_PASSWORD") ?: "EkamraTV2026"
             storeFile file(keystorePath)
             storePassword keystorePass
-            keyAlias keyAlias
-            keyPassword keyPass
+            keyAlias aliasName
+            keyPassword keyPasswd
         }
     }
 
