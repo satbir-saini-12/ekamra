@@ -37,13 +37,20 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x android-tv/gradlew
 
-      - name: Build debug APK
+      - name: Build release APK and AAB
         working-directory: android-tv
-        run: ./gradlew assembleDebug --no-daemon
+        run: ./gradlew assembleRelease bundleRelease --no-daemon
 
-      - name: Upload APK artifact
+      - name: Upload release APK
         uses: actions/upload-artifact@v4
         with:
-          name: ekamra-tv-apk
-          path: android-tv/app/build/outputs/apk/debug/*.apk
+          name: ekamra-tv-release-apk
+          path: android-tv/app/build/outputs/apk/release/*.apk
+          retention-days: 30
+
+      - name: Upload release AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: ekamra-tv-release-aab
+          path: android-tv/app/build/outputs/bundle/release/*.aab
           retention-days: 30
